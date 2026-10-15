@@ -20,11 +20,18 @@ export function renderGallery(root,content=GALLERY_CONTENT){
     image.addEventListener('error',()=>{image.hidden=true;image.removeAttribute('src');empty.hidden=false;empty.textContent='画像を読み込めませんでした';},{once:true});
     image.setAttribute('src',item.image);media.append(image);
    }
-   link.append(media,make('span','pw-gallery-label',item.label),make('span','pw-gallery-title',item.title),make('span','pw-gallery-cta',key==='booth'?'商品ページを見る ↗':'イラストを見る ↗'));
+   link.append(media,make('span','pw-gallery-title',item.title));
    tile.append(link);
    if(key==='booth'&&item.availability!=='public')tile.append(make('p','pw-gallery-status',item.availability==='private'?'現在、商品ページは非公開です。':'公開状態未確認・閲覧できない場合があります。'));
    grid.append(tile);
   }
   answer.append(grid);
+  if(group.moreUrl){
+   const more=make('a','pw-gallery-more','もっと見る →');
+   more.setAttribute('data-link',`${key}-more`);more.tabIndex=-1;
+   try{const url=new URL(group.moreUrl);if(url.protocol!=='https:')throw new Error('HTTPS required');more.setAttribute('href',url.href);more.target='_blank';more.rel='noopener noreferrer';}
+   catch{more.setAttribute('aria-disabled','true');}
+   answer.append(more);
+  }
  }
 }
