@@ -1,0 +1,8 @@
+.DS_Store
+backups/
+tests/
+references/
+release/
+.env
+.env.*
+*.log

@@ -1,0 +1,41 @@
+:root{--portfolio-brown:#79685D;font-family:"BIZ UDPGothic",-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;color:#424441;background:#f5f5f3;font-synthesis:none}*{box-sizing:border-box}body{margin:0}.page{max-width:760px;margin:auto;padding:35px 30px 20px}.hero{padding:24px 0 58px}.avatar{display:none;width:68px;height:68px;border-radius:50%;overflow:hidden;background:#e5e5e2;align-items:center;justify-content:center;margin-bottom:25px;font-weight:700;font-size:22px}.avatar.has-image{display:flex}.avatar img{width:100%;height:100%;object-fit:cover}h1{margin:0;font-size:clamp(52px,10vw,84px);letter-spacing:-.065em;line-height:1.15;font-weight:700}h1 small{display:block;font-size:clamp(23px,5vw,38px);letter-spacing:-.05em;margin-top:14px}.intro{font-size:14px;color:var(--portfolio-brown);margin:22px 0 26px}.social{display:flex;flex-wrap:nowrap;align-items:center;gap:14px}.social a{display:inline-flex;flex:0 0 44px;width:44px;height:44px;min-width:44px;min-height:44px;align-items:center;justify-content:center;padding:0;border:0;background:none;color:inherit;text-decoration:none}.social img{display:block;width:36px;height:36px;object-fit:contain;transition:transform .2s ease}.social a[data-link="wavebox"] img{width:30px;height:30px}.social a:focus-visible{outline:2px solid #858781;outline-offset:4px;border-radius:2px}@media(prefers-reduced-motion:no-preference){.social a:hover img{transform:translateY(-2px)}}.work-card[href]:hover{transform:translateY(-2px);border-color:#858781}.social a:not([href]),.work-card:not([href]){cursor:default}.section{border-top:1px solid #d1d1cd;padding:24px 0 40px}.section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:20px}.section-heading h2{font-size:24px;letter-spacing:-.04em;margin:0}.section-heading>span{font-size:10px;letter-spacing:.13em;color:#8b8d88}.cards{display:grid;gap:10px}.work-card{display:flex;align-items:center;gap:24px;padding:20px 23px;min-height:84px;border:1px solid #d1d1cd;background:#fff;border-radius:13px;color:#424441;text-decoration:none;transition:transform .2s,border-color .2s}.number{font-size:13px;color:#999b96;min-width:22px}.card-copy{flex:1;display:grid;gap:5px}.card-copy strong{font-size:16px}.card-copy small{font-size:12px;color:#777974}.arrow{font-size:22px;font-weight:300}footer{text-align:center;color:#858781;font-size:11px;padding:20px 0 25px}@media(max-width:520px){.page{padding:25px 21px 12px}.hero{padding:18px 0 47px}.work-card{padding:18px 17px;gap:15px}.section{padding-bottom:32px}.section-heading h2{font-size:22px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* Scoped to the existing Works rule; the rule itself is unchanged. */
+#works:has(.korokke-lane){position:relative}
+#works>.korokke-lane{position:absolute;bottom:calc(100% + 1px);left:0;right:0;height:160px;overflow:hidden;pointer-events:none;contain:layout paint}
+#korokke-canvas{display:block;width:100%;height:100%;pointer-events:none;background:transparent}
+.page:has(#works>.korokke-lane) .hero{padding-bottom:170px}
+@media(max-width:520px){#works>.korokke-lane{height:112px}.page:has(#works>.korokke-lane) .hero{padding-bottom:122px}}
+.portfolio-sparkle{position:fixed;width:9px;height:9px;left:0;top:0;z-index:1000;pointer-events:none;clip-path:polygon(50% 0,62% 36%,100% 50%,62% 64%,50% 100%,38% 64%,0 50%,38% 36%);filter:drop-shadow(0 0 1px #c3b6cf);animation:portfolio-sparkle .62s ease-out forwards}
+@keyframes portfolio-sparkle{0%{transform:translate(var(--sx),var(--sy)) scale(.4) rotate(0);opacity:1}25%{opacity:1}100%{transform:translate(calc(var(--sx) + var(--dx)),calc(var(--sy) + var(--dy))) scale(.1) rotate(var(--spin));opacity:0}}
+@media(prefers-reduced-motion:reduce){.portfolio-sparkle{display:none}}
+
+/* Local BIZ UDPGothic for Japanese and Latin, SIL OFL 1.1; see assets/fonts/OFL.txt. */
+@font-face{font-family:"BIZ UDPGothic";src:url("assets/fonts/BIZUDPGothic-Regular.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"BIZ UDPGothic";src:url("assets/fonts/BIZUDPGothic-Bold.ttf") format("truetype");font-style:normal;font-weight:700;font-display:swap}
+:root{--portfolio-ui-font:"BIZ UDPGothic",-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;font-family:var(--portfolio-ui-font)}
+.social,.section-heading>span,.number,.arrow,footer{font-family:var(--portfolio-ui-font)}
+.hero{padding-top:24px}
+.hero h1{display:grid;gap:10px;font-size:36px;font-weight:400;line-height:1.35;letter-spacing:0;word-break:normal;line-break:strict}
+.hero .owner-name{display:block;font-size:40px;line-height:1.25;letter-spacing:.015em}
+.hero .site-title{color:var(--portfolio-brown);display:block;font-size:36px;line-height:1.4;letter-spacing:.015em;overflow-wrap:break-word}
+.intro{font-weight:400;line-height:1.85;letter-spacing:.025em;margin-top:18px}
+a[data-link="nekoto"] .card-copy strong{font-weight:400;line-height:1.55;letter-spacing:.02em}
+a[data-link="poipiku"] .card-copy small,a[data-link="wavebox"] .card-copy small{font-weight:400;line-height:1.65;letter-spacing:.015em}
+@media(max-width:520px){.hero{padding-top:18px}.hero h1{gap:8px}.hero .owner-name{font-size:30px}.hero .site-title{font-size:clamp(24px,5.4vw,28px);line-height:1.45;letter-spacing:0}}
+
+#works{color:#191919}
+#works .section-heading>span,footer{color:#333}
+
+/* User-provided bubble PNG, scaled uniformly with its original 100:51 proportions. */
+.social a{position:relative}
+.social .social-tooltip{position:absolute;bottom:calc(100% - 4px);left:calc(50% - 17px);transform:translateX(-50%);width:68px;aspect-ratio:100/51;display:flex;align-items:center;justify-content:center;padding:0 5px 7px;background:url("assets/icons/social-tooltip.png") center/contain no-repeat;color:#252525;font-size:10px;font-weight:400;line-height:1;white-space:nowrap;pointer-events:none;visibility:hidden;opacity:0;z-index:5}
+.social a[data-link="wavebox"] .social-tooltip{width:96px;padding-bottom:10px}
+.social a:focus-visible .social-tooltip{visibility:visible;opacity:1}
+@media(hover:hover) and (pointer:fine){.social a:hover .social-tooltip{visibility:visible;opacity:1}}
+
+/* Original sleeping-cat PNG: only blank margins are hidden; artwork keeps its aspect ratio. */
+.sleeping-cat{position:fixed;right:max(12px,env(safe-area-inset-right));bottom:max(10px,env(safe-area-inset-bottom));width:230px;aspect-ratio:900/490;overflow:hidden;pointer-events:none;user-select:none;z-index:2;mix-blend-mode:multiply;visibility:hidden}
+.sleeping-cat.is-clear{visibility:visible}
+.sleeping-cat img{position:absolute;display:block;width:157%;height:auto;max-width:none;left:-28%;bottom:-5%;pointer-events:none}
+@media(max-width:520px){.sleeping-cat{width:115px;right:max(8px,env(safe-area-inset-right));bottom:max(8px,env(safe-area-inset-bottom))}}
