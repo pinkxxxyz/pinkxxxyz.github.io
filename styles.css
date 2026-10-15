@@ -34,8 +34,7 @@ a[data-link="poipiku"] .card-copy small,a[data-link="wavebox"] .card-copy small{
 .social a:focus-visible .social-tooltip{visibility:visible;opacity:1}
 @media(hover:hover) and (pointer:fine){.social a:hover .social-tooltip{visibility:visible;opacity:1}}
 
-/* Original sleeping-cat PNG: only blank margins are hidden; artwork keeps its aspect ratio. */
-.sleeping-cat{position:fixed;right:max(12px,env(safe-area-inset-right));bottom:max(10px,env(safe-area-inset-bottom));width:230px;aspect-ratio:900/490;overflow:hidden;pointer-events:none;user-select:none;z-index:2;mix-blend-mode:multiply;visibility:hidden}
-.sleeping-cat.is-clear{visibility:visible}
-.sleeping-cat img{position:absolute;display:block;width:157%;height:auto;max-width:none;left:-28%;bottom:-5%;pointer-events:none}
-@media(max-width:520px){.sleeping-cat{width:115px;right:max(8px,env(safe-area-inset-right));bottom:max(8px,env(safe-area-inset-bottom))}}
+/* Original decorative image centered on the existing grounding line; no layout shift. */
+#works>.works-ground-line{position:absolute;top:0;left:0;width:100%;height:auto;transform:translateY(-50%);pointer-events:none;visibility:hidden}
+#works.has-ground-line{border-top-color:transparent}
+#works.has-ground-line>.works-ground-line{visibility:visible}
