@@ -24,7 +24,6 @@ export function renderGallery(root,content=GALLERY_CONTENT){
    }
    link.append(media,make('span','pw-gallery-title',item.title));
    tile.append(link);
-   if(key==='booth'&&item.availability!=='public')tile.append(make('p','pw-gallery-status',item.availability==='private'?'現在、商品ページは非公開です。':'公開状態未確認・閲覧できない場合があります。'));
    grid.append(tile);
   }
   answer.append(grid);
