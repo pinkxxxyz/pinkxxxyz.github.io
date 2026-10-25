@@ -8,10 +8,12 @@ export function renderGallery(root,content=GALLERY_CONTENT){
   if(group.description)answer.append(make('p','pw-description',group.description));
   const grid=make('div','pw-gallery-grid');
   for(const item of group.items){
-   const tile=make('div','pw-gallery-item'),link=make('a','pw-gallery-link');
+   const tile=make('div','pw-gallery-item'),link=make(item.url?'a':'div','pw-gallery-link');
+   if(item.url){
    link.setAttribute('data-link',item.id);link.setAttribute('aria-label',`${item.title} — ${item.label}を開く`);link.tabIndex=-1;
    try{const url=new URL(item.url);if(url.protocol!=='https:')throw new Error('HTTPS required');link.setAttribute('href',url.href);link.target='_blank';link.rel='noopener noreferrer';}
    catch{link.setAttribute('aria-disabled','true');}
+   }
    const media=make('figure','pw-gallery-media'),empty=make('span','pw-gallery-empty','画像未設定');
    media.append(empty);
    if(typeof item.image==='string'&&item.image.trim()){

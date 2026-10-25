@@ -7,8 +7,8 @@ export const GALLERY_CONTENT={
   {id:'poipiku-01',label:'poipiku 01',title:'無双/曹操',url:'https://poipiku.com/13941984/13299242.html',image:'assets/gallery/poipiku-01.jpg',imageAlt:'無双/曹操 — poipiku 01',availability:'public'},
   {id:'poipiku-02',label:'poipiku 02',title:'無双/曹操',url:'https://poipiku.com/13941984/13299226.html',image:'assets/gallery/poipiku-02.jpg',imageAlt:'無双/曹操 — poipiku 02',availability:'public'}
  ]},
- booth:{moreUrl:'https://ciao9999.booth.pm/',description:'Creative Works',items:[
-  {id:'booth-01',label:'BOOTH 01',title:'アクリルキーホルダー（70mm・50mm）',url:'https://ciao9999.booth.pm/items/8899317',image:'assets/gallery/booth-01.jpg',imageAlt:'アクリルキーホルダー（70mm・50mm）',availability:'public',availabilitySource:'user-confirmed-logged-out-firefox-private'},
-  {id:'booth-02',label:'BOOTH 02',title:'めじるしチャームA',url:'https://ciao9999.booth.pm/items/8875837',image:'assets/gallery/booth-02.png',imageAlt:'めじるしチャームA',availability:'public',availabilitySource:'user-confirmed-logged-out-firefox-private'}
+ booth:{description:'Creative Works',items:[
+  {id:'booth-01',label:'BOOTH 01',title:'アクリルキーホルダー（70mm・50mm）',image:'assets/gallery/booth-01.jpg',imageAlt:'アクリルキーホルダー（70mm・50mm）',availability:'public',availabilitySource:'user-confirmed-logged-out-firefox-private'},
+  {id:'booth-02',label:'BOOTH 02',title:'めじるしチャームA',image:'assets/gallery/booth-02.png',imageAlt:'めじるしチャームA',availability:'public',availabilitySource:'user-confirmed-logged-out-firefox-private'}
  ]}
 };

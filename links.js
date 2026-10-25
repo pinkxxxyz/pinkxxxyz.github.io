@@ -7,7 +7,6 @@ window.PORTFOLIO_LINKS = {
   github: 'https://github.com/pinkxxxyz',
   panzer: 'https://addons.mozilla.org/ja/firefox/addon/panzer-bleak/',
   nekoto: 'https://pinkxxxyz.github.io/nekoto-mainichi/',
-  booth: '',
   poipiku: '',
   wavebox: 'https://wavebox.me/wave/755g5bsmvgqnp1tk/'
 };
