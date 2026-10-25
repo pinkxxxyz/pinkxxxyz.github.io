@@ -63,3 +63,6 @@
 .portfolio-works .pw-panzer-screenshots img{display:block;width:100%;height:auto;border-radius:10px}
 
 .portfolio-works .pw-answer .pw-gallery-more{display:flex;width:fit-content;margin-top:16px;color:var(--pw-brown);min-height:44px}
+
+/* Only the PAGE CRAFT portrait is narrower; reuse the existing screenshot stack. */
+.portfolio-works [data-work-key="pageCraft"] .pw-page-craft-home{width:min(100%,320px);margin-inline:auto}
